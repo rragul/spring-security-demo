@@ -1,0 +1,49 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+/docker/volume_mysql/#ib_16384_0.dblwr
+/docker/volume_mysql/#ib_16384_1.dblwr
+/docker/volume_mysql/auto.cnf
+/docker/volume_mysql/binlog.000001
+/docker/volume_mysql/binlog.000002
+/docker/volume_mysql/binlog.index
+/docker/volume_mysql/ca-key.pem
+/docker/volume_mysql/client-key.pem
+/docker/volume_mysql/ib_buffer_pool
+/docker/volume_mysql/ibdata1
+/docker/volume_mysql/ibtmp1
+/docker/volume_mysql/mysql.ibd
+/docker/volume_mysql/private_key.pem
+/docker/volume_mysql/server-key.pem
+/docker/volume_mysql/undo_001
+/docker/volume_mysql/undo_002
