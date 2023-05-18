@@ -5,6 +5,9 @@ import com.ragul.springsecuritydemo.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/api/v1/user")
 @AllArgsConstructor
@@ -13,24 +16,18 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/all")
-    public String getAllUsers() {
-        return userService.getAllUsers().toString();
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
     }
 
     @GetMapping("/id/{id}")
-    public String getUserById(@PathVariable Integer id) {
-        return userService.getUserById(id).toString();
+    public User getUserById(@PathVariable Integer id) {
+        return userService.getUserById(id);
     }
 
-    @GetMapping("/{username}")
-    public String getUserByUserName(@PathVariable String username) {
-        return userService.getUserByUserName(username).toString();
-    }
-
-    @PostMapping("/add")
-    public String addUser(@RequestBody User user) {
-        userService.addUser(user);
-        return "User added successfully";
+    @GetMapping("/{email}")
+    public Optional<User> getUserByEmail(@PathVariable String email) {
+        return userService.getUserByEmail(email);
     }
 
     @PutMapping("/update/{id}")
