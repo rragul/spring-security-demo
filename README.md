@@ -1,4 +1,7 @@
-# spring-security-demo
+# spring-security-demo with JWT
 
-You Can acess '/api/v1/user/add' and '/api/v1/user/all' end points without any authentication
-If you want to access other endpoints you need authanticate with username and password
+You Can access _/api/v1/auth/register_ and _/api/v1/auth/login_ end points without any authentication.
+
+If you want to access other endpoints you need send request with JWT token in header which you get from login endpoint.
+
+![img.png](img.png)
